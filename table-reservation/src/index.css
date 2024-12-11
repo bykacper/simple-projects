@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.window {
+  background-color: aqua;
+  position: absolute;
+}
+
+.window:nth-child(2) {
+  top: 50%;
+  transform: translate(0%, -50%); /* Przesuwa środek elementu */
+  height: 43vh;
+  width: 50px;
+}
+
+.window:nth-child(5) {
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0); /* Przesuwa środek elementu */
+  height: 50px;
+  width: 350px;
+}
+
+.window:nth-child(8) {
+  right: 0%;
+  top: 50%;
+  transform: translate(0%, -50%); /* Przesuwa środek elementu */
+  height: 43vh;
+  width: 50px;
+}
+
+.window:nth-child(11) {
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0); /* Przesuwa środek elementu */
+  height: 50px;
+  width: 350px;
+}
+
+.longWall {
+  background-color: burlywood;
+  position: absolute;
+  width: 810px;
+  height: 50px;
+}
+
+.longWall:nth-child(1) {
+  top: 0;
+
+}
+
+.longWall:nth-child(3) {
+  top: 0;
+  right: 0;
+}
+
+.longWall:nth-child(7) {
+  bottom: 0;
+  right: 0;
+}
+
+.longWall:nth-child(9) {
+  bottom: 0;
+  left: 0;
+}
+
+.shortWall {
+  background-color: burlywood;
+  position: absolute;
+  width: 50px;
+  height: 224px;
+}
+
+.shortWall:nth-child(4) {
+  left: 0;
+  top: 50px;
+}
+
+.shortWall:nth-child(6) {
+  right: 0;
+  top: 50px;
+}
+
+.shortWall:nth-child(10) {
+  left: 0;
+  bottom: 50px;
+}
+
+.shortWall:nth-child(12) {
+  right: 0;
+  bottom: 50px;
+}
+
+.tables {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  height: 89.5vh;
+  width: 95vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap:wrap-reverse;
+  gap:200px;
+}
+
+.table {
+  background-color: lightgreen;
+  width: 100px;
+  height: 100px;
+}
+
+.table-info {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  background-color:rgba(92, 158, 160, .8);
+  width: 30vw;
+  height: 60vh;
+}
+
+button {
+  width: 50%;
+  height: 30px;
+  background-color: rgba(92, 158, 160, .8);
+  border: solid rgba(92, 158, 160, 1) 1px;
+  cursor: pointer;
+}
+
+.table-info button:hover {
+  background-color: rgba(62, 162, 165, 0.8);
+}
+
+.table-info img {
+  position: absolute;
+  bottom: 100%;
+  right: 0%;
+  width: 8%;
+  background-color: rgba(92, 158, 160, .8);
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+.book {
+  height: 538px;
+}
