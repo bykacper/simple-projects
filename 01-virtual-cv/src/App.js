@@ -5,6 +5,7 @@ import PortfolioHeader from "./components/PortfolioHeader";
 import CardProject from "./components/CardProject";
 import Footer from "./components/Footer";
 import Form from 'react-bootstrap/Form'
+import Switch from "./components/Switch";
 
 function App() {
   const [skills, setSkills] = useState(['React.js', 'Styled Components', 'React Hooks', 'Create React App', 'NPM', 'HTML', 'JavaScript', 'CSS: Flex Box', 'CSS: Animation/KeyFrames']);
@@ -41,20 +42,21 @@ function App() {
       content: "Currency-converter is a simple app built with Vanilla JavaScript. It allows you to convert PLN to USD, SEK, EUR, CHF."
     },
   ])
-  const [checked, setChecked] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(false);
   
   return (
-    <section className="bg-light" style={ {boxSizing: "border-box" } }>
-      <CardProfile />
-      <CardSet title={"My skillset includes 🛠️"} skills={skills}/>
-      <CardSet title={"What I want to learn next 🚀"} skills={toLearn}/>
-      <PortfolioHeader />
+    <section className={isDarkMode ? 'bg-dark' : 'bg-white'} style={ {boxSizing: "border-box" } }>
+      <Switch isDarkMode={isDarkMode} setDarkMode={() => setDarkMode(prevMode => !prevMode)}/>
+      <CardProfile isDarkMode={isDarkMode}/>
+      <CardSet title={"My skillset includes 🛠️"} skills={skills} isDarkMode={isDarkMode}/>
+      <CardSet title={"What I want to learn next 🚀"} skills={toLearn} isDarkMode={isDarkMode}/>
+      <PortfolioHeader isDarkMode={isDarkMode}/>
       <div className="d-flex flex-wrap justify-content-around gap-3 mx-auto" style={ {width: '51%'}}>
       { projects && projects.map(project => {
-        return <CardProject key={project.key} title={project.title} content={project.content} />
+        return <CardProject key={project.key} title={project.title} content={project.content} isDarkMode={isDarkMode}/>
       })}
       </div>
-      <Footer />
+      <Footer isDarkMode={isDarkMode}/>
     </section>
   );
 }

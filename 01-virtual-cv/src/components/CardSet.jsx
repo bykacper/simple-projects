@@ -1,6 +1,6 @@
-export default function CardSet({ title, skills }) {
+export default function CardSet({ title, skills, isDarkMode }) {
     return (
-        <section className="bg-white border border-secondary-subtle mx-auto mt-3 p-3" style={ {width: "51%"} }>
+        <section className={isDarkMode ? 'bg-dark text-white border border-secondary-subtle mx-auto mt-3 p-3' : 'bg-white border border-secondary-subtle mx-auto mt-3 p-3'} style={ {width: "51%"} }>
             <h2> {title} </h2>
             <hr />
             <ul className="d-flex flex-wrap">

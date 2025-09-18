@@ -2,9 +2,9 @@ import girl_image from '../assets/images/girl-image.jpg';
 import post_image from '../assets/images/post.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function CardProfile() {
+export default function CardProfile({ isDarkMode }) {
     return (
-        <section className='d-flex align-items-center justify-content-center gap-5 py-5'>
+        <section className={isDarkMode ? 'bg-dark text-white d-flex align-items-center justify-content-center gap-5 py-5' : 'bg-white d-flex align-items-center justify-content-center gap-5 py-5'}>
             <img src={girl_image} className='rounded-circle'/>
             <div>
                 <em> This is </em>
